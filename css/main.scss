@@ -1,0 +1,158 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+// cssgradient.io
+$linearGradient: linear-gradient(252.37deg, #bd00ff 5.28%, #00a3ff 98.3%);
+$primaryColor: #2d7dff;
+$textColor: #847d93;
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins";
+  background: $linearGradient;
+  height: 100vh;
+  background-attachment: fixed;
+}
+
+.container {
+  margin: 1em 0.5em;
+  height: calc(100% - 2em);
+}
+
+section {
+  background: #221f26 url("../bg.jpg");
+  background-size: cover;
+  background-blend-mode: screen;
+  background-position: -100px;
+  height: 100%;
+  padding: 2em;
+  border-radius: 13px;
+}
+
+nav {
+  // display: none;
+}
+
+.logo {
+  color: $primaryColor;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  letter-spacing: -0.1em;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+}
+
+header {
+  display: flex;
+}
+
+.menu-btn {
+  cursor: pointer;
+}
+
+h1 {
+  font-size: clamp(2.5rem, calc(-0.875rem + 8.333vw), 4rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 89%;
+  color: #fff;
+}
+
+.content p {
+  font-size: clamp(2rem, calc(-0.875rem + 8.333vw), 3rem);
+  line-height: 111%;
+  font-weight: 300;
+  color: $textColor;
+  margin-top: 1.1em;
+}
+
+.cta {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 2.875em;
+  display: inline-block;
+  border: 1px solid #4d4d4d;
+  padding: 1.25em 1.25em 1.25em calc(2.5em + 1.5em);
+  position: relative;
+  transition: background 300ms ease-in;
+}
+
+.cta::before {
+  content: "";
+  position: absolute;
+  background: url("../arrow.svg") no-repeat;
+  width: 1.5em;
+  height: 1.5em;
+  left: 1.25em;
+}
+
+.cta:hover {
+  background: $primaryColor;
+}
+
+.cv {
+  display: grid;
+  place-items: center;
+  height: 80%;
+}
+
+nav {
+  position: fixed;
+  z-index: 1;
+  background: #2C2931;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  max-width: 300px;
+  transform: translateX(-100%);
+  transition: transform 300ms;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+ul li {
+  width: 100%;
+}
+
+li a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  padding: .875em 5em .875em 4em;
+}
+
+li a:hover {
+  background: #413e47;
+}
+
+.active {
+  background: $primaryColor;
+}
+
+.active:hover {
+  background: #4497FF;
+}
+
+.back-btn {
+  transform: scalex(-1);
+  padding: 3em 4em 2em;
+  cursor: pointer;
+  transition: transform 300ms ease-in;
+}
+
+.back-btn:hover {
+  transform: scalex(-1) translateX(6px);
+}
