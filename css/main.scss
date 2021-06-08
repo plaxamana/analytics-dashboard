@@ -1,13 +1,15 @@
+// cssgradient.io
+$linearGradient: linear-gradient(252.37deg, #bd00ff 5.28%, #00a3ff 98.3%);
+$primaryColor: #2d7dff;
+$textColor: #847d93;
+$breakpoint-desktop: 1000px;
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-// cssgradient.io
-$linearGradient: linear-gradient(252.37deg, #bd00ff 5.28%, #00a3ff 98.3%);
-$primaryColor: #2d7dff;
-$textColor: #847d93;
 
 body {
   padding: 0;
@@ -31,10 +33,6 @@ section {
   height: 100%;
   padding: 2em;
   border-radius: 13px;
-}
-
-nav {
-  // display: none;
 }
 
 .logo {
@@ -155,4 +153,59 @@ li a:hover {
 
 .back-btn:hover {
   transform: scalex(-1) translateX(6px);
+}
+
+@media (min-width: 700px) {
+  .left-col {
+    display: flex;
+  }
+
+  .content p {
+    width: 70%;
+  }
+}
+
+@media (min-width: $breakpoint-desktop) {
+  nav {
+    position: unset;
+    transform: translateX(0) !important;
+    border-radius: unset;
+    border-top-left-radius: 13px;
+    border-bottom-left-radius: 13px;
+    height: 100%;
+    padding-top: 4em;
+  }
+
+  .menu-btn,
+  .back-btn {
+    display: none;
+  }
+
+  header {
+    padding: 1.6em;
+  }
+
+  .container {
+    display: flex;
+    padding: 2em;
+  }
+
+  .logo {
+    text-align: left;
+  }
+
+  section {
+    border-radius: unset;
+    border-top-right-radius: 13px;
+    border-bottom-right-radius: 13px;
+    width: 100%;
+    background-size: cover;
+    background-position: 0;
+    background-attachment: unset;
+  }
+
+  .content {
+    justify-self: left;
+    margin-left: 4em;
+  }
 }

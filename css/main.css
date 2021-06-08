@@ -161,4 +161,58 @@ li a:hover {
   -webkit-transform: scalex(-1) translateX(6px);
           transform: scalex(-1) translateX(6px);
 }
+
+@media (min-width: 700px) {
+  .left-col {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .content p {
+    width: 70%;
+  }
+}
+
+@media (min-width: 1000px) {
+  nav {
+    position: unset;
+    -webkit-transform: translateX(0) !important;
+            transform: translateX(0) !important;
+    border-radius: unset;
+    border-top-left-radius: 13px;
+    border-bottom-left-radius: 13px;
+    height: 100%;
+    padding-top: 4em;
+  }
+  .menu-btn,
+  .back-btn {
+    display: none;
+  }
+  header {
+    padding: 1.6em;
+  }
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 2em;
+  }
+  .logo {
+    text-align: left;
+  }
+  section {
+    border-radius: unset;
+    border-top-right-radius: 13px;
+    border-bottom-right-radius: 13px;
+    width: 100%;
+    background-size: cover;
+    background-position: 0;
+    background-attachment: unset;
+  }
+  .content {
+    -ms-grid-column-align: left;
+        justify-self: left;
+    margin-left: 4em;
+  }
+}
 /*# sourceMappingURL=main.css.map */
